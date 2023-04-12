@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7B34A51F29E6B0310097A5AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34A51E29E6B0310097A5AF /* LoginViewController.swift */; };
+		7B34A52129E6C7DD0097A5AF /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34A52029E6C7DD0097A5AF /* UserData.swift */; };
+		7B34A52329E6CDBF0097A5AF /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34A52229E6CDBF0097A5AF /* registerViewController.swift */; };
+		7B34A52529E6D6160097A5AF /* ListAllTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */; };
 		7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */; };
 		7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */; };
 		7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89929E6A0EA00AEFD50 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		7B34A51E29E6B0310097A5AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B34A52029E6C7DD0097A5AF /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		7B34A52229E6CDBF0097A5AF /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllTasksViewController.swift; sourceTree = "<group>"; };
 		7BEAD89229E6A0EA00AEFD50 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 		7BEAD89429E6A0EA00AEFD50 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
+				7B34A52229E6CDBF0097A5AF /* registerViewController.swift */,
 				7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */,
 				7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */,
 				7BEAD89929E6A0EA00AEFD50 /* ViewController.swift */,
@@ -66,6 +73,8 @@
 				7BEAD8A029E6A0EB00AEFD50 /* LaunchScreen.storyboard */,
 				7BEAD8A329E6A0EB00AEFD50 /* Info.plist */,
 				7B34A51E29E6B0310097A5AF /* LoginViewController.swift */,
+				7B34A52029E6C7DD0097A5AF /* UserData.swift */,
+				7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -142,8 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B34A51F29E6B0310097A5AF /* LoginViewController.swift in Sources */,
+				7B34A52529E6D6160097A5AF /* ListAllTasksViewController.swift in Sources */,
 				7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */,
 				7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */,
+				7B34A52329E6CDBF0097A5AF /* registerViewController.swift in Sources */,
+				7B34A52129E6C7DD0097A5AF /* UserData.swift in Sources */,
 				7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
