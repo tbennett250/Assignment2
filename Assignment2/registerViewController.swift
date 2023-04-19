@@ -19,21 +19,50 @@ class registerViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     
-    @IBOutlet weak var registerLabel: UILabel!
     
+    @IBOutlet weak var imgViewLabel: UIImageView!
     
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        DispatchQueue.main.async {
+            self.messageLabel.text = ""
+        }
+        
+        
     }
     
-   
+    func changeLabelDanger(msg: String){
+        DispatchQueue.main.async {
+            self.messageLabel.text = msg
+            self.messageLabel.textColor = .red
+            self.imgViewLabel.image = UIImage(named: "cancel")
+        }
+    }
+    
+    func changeLabelSuccess(msg: String){
+        DispatchQueue.main.async {
+            self.messageLabel.text = msg
+            self.messageLabel.textColor = .green
+            self.imgViewLabel.image = UIImage(named: "accept")
+        }
+    }
+
     
     @IBAction func registerButtonClicked(_ sender: Any) {
+        
         guard let username = usernameField.text,
               let password = passwordField.text,
               let email = emailField.text else {
+            return
+        }
+        print(username.isEmpty)
+        
+        guard !username.isEmpty || !password.isEmpty || !email.isEmpty else{
+            self.changeLabelDanger(msg: "Please complete the form.")
             return
         }
         
@@ -64,11 +93,13 @@ class registerViewController: UIViewController {
             guard let httpResponse = response as? HTTPURLResponse,
                   (200..<300).contains(httpResponse.statusCode) else {
                 print("Error: Invalid response")
+                self.changeLabelDanger(msg: "Error - Invalid response to server")
                 return
             }
             
             guard let data = data else {
                 print("Error: No data received")
+                self.changeLabelDanger(msg: "No data inputted")
                 return
             }
             
@@ -80,15 +111,18 @@ class registerViewController: UIViewController {
                     print("User registration successful")
                     // In order to change label we need to use another thread:
                     // the code in the dispatchQueue allows the changes to be made
+                    
+                    self.changeLabelSuccess(msg: "Registration Successful")
+                    
                     DispatchQueue.main.async {
-                        self.registerLabel.text = "Registration Successful, Please return to home screen"
-                        self.registerLabel.textColor = .green
+                        
                         
                         let LoginVC = (self.storyboard?.instantiateViewController(withIdentifier: "LoginVC"))!
                         self.navigationController?.pushViewController(LoginVC, animated: true)
                     }
                 } else {
                     print("User registration failed")
+                    self.changeLabelDanger(msg: "User Registration Failed")
                 }
             } catch {
                 print("Error: \(error.localizedDescription)")

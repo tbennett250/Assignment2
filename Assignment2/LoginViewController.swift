@@ -9,14 +9,43 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginLabel: UILabel!
     
+    @IBOutlet weak var imgViewLabel: UIImageView!
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DispatchQueue.main.async {
+            self.messageLabel.text = ""
+        }
+    }
+    
+    func changeLabelDanger(msg: String){
+        DispatchQueue.main.async {
+            self.messageLabel.text = msg
+            self.messageLabel.textColor = .red
+            self.imgViewLabel.image = UIImage(named: "cancel")
+        }
+    }
+    
+    func changeLabelSuccess(msg: String){
+        DispatchQueue.main.async {
+            self.messageLabel.text = msg
+            self.messageLabel.textColor = .green
+            self.imgViewLabel.image = UIImage(named: "accept")
+        }
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         var loggedIn = false
         guard let username = usernameTextField.text,
               let password = passwordTextField.text else {
+            return
+        }
+        
+        guard !username.isEmpty || !password.isEmpty else{
+            changeLabelDanger(msg: "Please enter the details")
             return
         }
         
@@ -47,11 +76,13 @@ class LoginViewController: UIViewController {
             guard let httpResponse = response as? HTTPURLResponse,
                   (200..<300).contains(httpResponse.statusCode) else {
                       print("Error: Invalid response")
+                self.changeLabelDanger(msg: "Invalid response, try again")
                       return
                   }
             
             guard let data = data else {
                 print("Error: No data received")
+                self.changeLabelDanger(msg: "No data recieved")
                 return
             }
             
@@ -66,6 +97,7 @@ class LoginViewController: UIViewController {
                     }
                     print("User logged in successfully")
                 } else {
+                    self.changeLabelDanger(msg: "Invalid Username or Password")
                     print("Invalid username or password")
                 }
             } catch {
@@ -74,7 +106,7 @@ class LoginViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if(loggedIn == true){
-                    
+                    self.changeLabelSuccess(msg: "Success - Redirecting")
                     let uservc = (self.storyboard?.instantiateViewController(withIdentifier: "UserVC"))!
                     self.notificationLabel.text = "Please Login"
                     self.navigationController?.pushViewController(uservc, animated: true)
