@@ -13,6 +13,12 @@
 		7B34A52529E6D6160097A5AF /* ListAllTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */; };
 		7B6A646229EFEE39006D61B3 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646129EFEE39006D61B3 /* menuViewController.swift */; };
 		7B6A646429EFFDB1006D61B3 /* listProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646329EFFDB1006D61B3 /* listProjectsViewController.swift */; };
+		7B6A646629F915D6006D61B3 /* clipboardWithGlass.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B6A646529F915D6006D61B3 /* clipboardWithGlass.png */; };
+		7B6A646829F91ACD006D61B3 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646729F91ACD006D61B3 /* AddProjectViewController.swift */; };
+		7B6A646A29F933AE006D61B3 /* URLSessionCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646929F933AE006D61B3 /* URLSessionCalls.swift */; };
+		7B6A646C29F934A4006D61B3 /* ListAllProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */; };
+		7B6A646F29F93656006D61B3 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646E29F93656006D61B3 /* Project.swift */; };
+		7B6A647129F93679006D61B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647029F93679006D61B3 /* User.swift */; };
 		7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */; };
 		7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */; };
 		7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89929E6A0EA00AEFD50 /* ViewController.swift */; };
@@ -28,6 +34,12 @@
 		7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllTasksViewController.swift; sourceTree = "<group>"; };
 		7B6A646129EFEE39006D61B3 /* menuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		7B6A646329EFFDB1006D61B3 /* listProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listProjectsViewController.swift; sourceTree = "<group>"; };
+		7B6A646529F915D6006D61B3 /* clipboardWithGlass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clipboardWithGlass.png; path = Assets.xcassets/clipboardWithGlass.png; sourceTree = "<group>"; };
+		7B6A646729F91ACD006D61B3 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		7B6A646929F933AE006D61B3 /* URLSessionCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCalls.swift; sourceTree = "<group>"; };
+		7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllProjectsViewController.swift; sourceTree = "<group>"; };
+		7B6A646E29F93656006D61B3 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		7B6A647029F93679006D61B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7BEAD89229E6A0EA00AEFD50 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B6A646D29F9363C006D61B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B34A52029E6C7DD0097A5AF /* UserData.swift */,
+				7B6A646E29F93656006D61B3 /* Project.swift */,
+				7B6A647029F93679006D61B3 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7BEAD88929E6A0EA00AEFD50 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +90,7 @@
 		7BEAD89429E6A0EA00AEFD50 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
+				7B6A646729F91ACD006D61B3 /* AddProjectViewController.swift */,
 				7B6A646329EFFDB1006D61B3 /* listProjectsViewController.swift */,
 				7B34A52229E6CDBF0097A5AF /* registerViewController.swift */,
 				7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */,
@@ -75,12 +98,15 @@
 				7BEAD89929E6A0EA00AEFD50 /* ViewController.swift */,
 				7BEAD89B29E6A0EA00AEFD50 /* Main.storyboard */,
 				7BEAD89E29E6A0EB00AEFD50 /* Assets.xcassets */,
+				7B6A646529F915D6006D61B3 /* clipboardWithGlass.png */,
 				7BEAD8A029E6A0EB00AEFD50 /* LaunchScreen.storyboard */,
 				7BEAD8A329E6A0EB00AEFD50 /* Info.plist */,
 				7B34A51E29E6B0310097A5AF /* LoginViewController.swift */,
-				7B34A52029E6C7DD0097A5AF /* UserData.swift */,
+				7B6A646D29F9363C006D61B3 /* Models */,
 				7B34A52429E6D6160097A5AF /* ListAllTasksViewController.swift */,
 				7B6A646129EFEE39006D61B3 /* menuViewController.swift */,
+				7B6A646929F933AE006D61B3 /* URLSessionCalls.swift */,
+				7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -146,6 +172,7 @@
 				7BEAD8A229E6A0EB00AEFD50 /* LaunchScreen.storyboard in Resources */,
 				7BEAD89F29E6A0EB00AEFD50 /* Assets.xcassets in Resources */,
 				7BEAD89D29E6A0EA00AEFD50 /* Main.storyboard in Resources */,
+				7B6A646629F915D6006D61B3 /* clipboardWithGlass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,9 +188,14 @@
 				7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */,
 				7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */,
 				7B34A52329E6CDBF0097A5AF /* registerViewController.swift in Sources */,
+				7B6A646F29F93656006D61B3 /* Project.swift in Sources */,
+				7B6A647129F93679006D61B3 /* User.swift in Sources */,
 				7B34A52129E6C7DD0097A5AF /* UserData.swift in Sources */,
 				7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */,
+				7B6A646A29F933AE006D61B3 /* URLSessionCalls.swift in Sources */,
+				7B6A646C29F934A4006D61B3 /* ListAllProjectsViewController.swift in Sources */,
 				7B6A646229EFEE39006D61B3 /* menuViewController.swift in Sources */,
+				7B6A646829F91ACD006D61B3 /* AddProjectViewController.swift in Sources */,
 				7B6A646429EFFDB1006D61B3 /* listProjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

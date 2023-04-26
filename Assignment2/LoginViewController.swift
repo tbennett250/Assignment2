@@ -119,10 +119,4 @@ class LoginViewController: UIViewController {
     }
 }
 
-struct User: Codable {
-    let id: Int
 
-    let email: String
-    let username: String
-    let password: String
-}
