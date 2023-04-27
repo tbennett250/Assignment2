@@ -99,7 +99,7 @@ extension URLSession {
           }.resume()
       }
       
-      func postData<T: Codable>(_ object: T, urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
+    func postData<T: Codable>(_ object: T, urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
           guard let url = URL(string: urlString) else {
               return
           }
@@ -138,13 +138,28 @@ extension URLSession {
               }
               
               do {
+                  
+                  if let jsonString = String(data: data, encoding: .utf8) {
+                      print("Received JSON data: \(jsonString)")
+                  }
+                  
                   let decoder = JSONDecoder()
-                  let createdObject = try decoder.decode(T.self, from: data)
-                  completion(.success(createdObject))
+                  let createdObject = try decoder.decode([T].self, from: data)
+                  
+                  if let createdObject = createdObject.first {
+                      completion(.success(createdObject))
+                  }
+
               } catch {
                   print("Error decoding JSON: \(error)")
                   completion(.failure(error))
               }
+              
+              
           }.resume()
       }
   }
+
+struct AddResult: Codable {
+    var Add_Success : Bool
+}

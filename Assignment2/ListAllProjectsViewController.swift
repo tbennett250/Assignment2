@@ -15,7 +15,7 @@ class ListAllProjectsViewController: UIViewController {
         super.viewDidLoad()
         let userId = UserData.shared.currentUser!.id
         
-        
+        print(userId)
         let url = URL(string: "http://localhost:5000/api/projects/get/byuserid?id=\(userId)")
         
         var projects: [Project] = []
@@ -26,6 +26,7 @@ class ListAllProjectsViewController: UIViewController {
                 projects.append(contentsOf: results)
             case .failure(let error):
                 print(error)
+                print("ERROR")
             }
             
             var projectText = ""
@@ -61,3 +62,4 @@ class ListAllProjectsViewController: UIViewController {
     */
 
 }
+

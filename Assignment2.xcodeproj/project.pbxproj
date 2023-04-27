@@ -19,6 +19,12 @@
 		7B6A646C29F934A4006D61B3 /* ListAllProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */; };
 		7B6A646F29F93656006D61B3 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A646E29F93656006D61B3 /* Project.swift */; };
 		7B6A647129F93679006D61B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647029F93679006D61B3 /* User.swift */; };
+		7B6A647329FA8299006D61B3 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647229FA8299006D61B3 /* AddTaskViewController.swift */; };
+		7B6A647529FAAD69006D61B3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647429FAAD69006D61B3 /* Task.swift */; };
+		7B6A647729FAB617006D61B3 /* SelectProductForTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647629FAB617006D61B3 /* SelectProductForTaskViewController.swift */; };
+		7B6A647929FAB9F9006D61B3 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647829FAB9F9006D61B3 /* File.swift */; };
+		7B6A647B29FABFAC006D61B3 /* SelectTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647A29FABFAC006D61B3 /* SelectTaskViewController.swift */; };
+		7B6A647D29FAC816006D61B3 /* editTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A647C29FAC816006D61B3 /* editTaskViewController.swift */; };
 		7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */; };
 		7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */; };
 		7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAD89929E6A0EA00AEFD50 /* ViewController.swift */; };
@@ -40,6 +46,12 @@
 		7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllProjectsViewController.swift; sourceTree = "<group>"; };
 		7B6A646E29F93656006D61B3 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		7B6A647029F93679006D61B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7B6A647229FA8299006D61B3 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		7B6A647429FAAD69006D61B3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		7B6A647629FAB617006D61B3 /* SelectProductForTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProductForTaskViewController.swift; sourceTree = "<group>"; };
+		7B6A647829FAB9F9006D61B3 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		7B6A647A29FABFAC006D61B3 /* SelectTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTaskViewController.swift; sourceTree = "<group>"; };
+		7B6A647C29FAC816006D61B3 /* editTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editTaskViewController.swift; sourceTree = "<group>"; };
 		7BEAD89229E6A0EA00AEFD50 /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEAD89529E6A0EA00AEFD50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEAD89729E6A0EA00AEFD50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +79,8 @@
 				7B34A52029E6C7DD0097A5AF /* UserData.swift */,
 				7B6A646E29F93656006D61B3 /* Project.swift */,
 				7B6A647029F93679006D61B3 /* User.swift */,
+				7B6A647429FAAD69006D61B3 /* Task.swift */,
+				7B6A647829FAB9F9006D61B3 /* File.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,6 +104,9 @@
 		7BEAD89429E6A0EA00AEFD50 /* Assignment2 */ = {
 			isa = PBXGroup;
 			children = (
+				7B6A647A29FABFAC006D61B3 /* SelectTaskViewController.swift */,
+				7B6A647C29FAC816006D61B3 /* editTaskViewController.swift */,
+				7B6A647229FA8299006D61B3 /* AddTaskViewController.swift */,
 				7B6A646729F91ACD006D61B3 /* AddProjectViewController.swift */,
 				7B6A646329EFFDB1006D61B3 /* listProjectsViewController.swift */,
 				7B34A52229E6CDBF0097A5AF /* registerViewController.swift */,
@@ -107,6 +124,7 @@
 				7B6A646129EFEE39006D61B3 /* menuViewController.swift */,
 				7B6A646929F933AE006D61B3 /* URLSessionCalls.swift */,
 				7B6A646B29F934A4006D61B3 /* ListAllProjectsViewController.swift */,
+				7B6A647629FAB617006D61B3 /* SelectProductForTaskViewController.swift */,
 			);
 			path = Assignment2;
 			sourceTree = "<group>";
@@ -183,16 +201,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6A647B29FABFAC006D61B3 /* SelectTaskViewController.swift in Sources */,
 				7B34A51F29E6B0310097A5AF /* LoginViewController.swift in Sources */,
 				7B34A52529E6D6160097A5AF /* ListAllTasksViewController.swift in Sources */,
 				7BEAD89A29E6A0EA00AEFD50 /* ViewController.swift in Sources */,
 				7BEAD89629E6A0EA00AEFD50 /* AppDelegate.swift in Sources */,
+				7B6A647329FA8299006D61B3 /* AddTaskViewController.swift in Sources */,
 				7B34A52329E6CDBF0097A5AF /* registerViewController.swift in Sources */,
 				7B6A646F29F93656006D61B3 /* Project.swift in Sources */,
+				7B6A647929FAB9F9006D61B3 /* File.swift in Sources */,
 				7B6A647129F93679006D61B3 /* User.swift in Sources */,
+				7B6A647529FAAD69006D61B3 /* Task.swift in Sources */,
 				7B34A52129E6C7DD0097A5AF /* UserData.swift in Sources */,
+				7B6A647729FAB617006D61B3 /* SelectProductForTaskViewController.swift in Sources */,
 				7BEAD89829E6A0EA00AEFD50 /* SceneDelegate.swift in Sources */,
 				7B6A646A29F933AE006D61B3 /* URLSessionCalls.swift in Sources */,
+				7B6A647D29FAC816006D61B3 /* editTaskViewController.swift in Sources */,
 				7B6A646C29F934A4006D61B3 /* ListAllProjectsViewController.swift in Sources */,
 				7B6A646229EFEE39006D61B3 /* menuViewController.swift in Sources */,
 				7B6A646829F91ACD006D61B3 /* AddProjectViewController.swift in Sources */,
