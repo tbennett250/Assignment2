@@ -27,12 +27,21 @@ class SelectTaskViewController: UIViewController, UIPickerViewDataSource, UIPick
     //Overwride segue to pass information
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "editTaskSegue"{
-            let EditTaskVC = segue.destination as! editTaskViewController
-            EditTaskVC.taskId = self.selectedItemId
-            EditTaskVC.projectTitle = self.projectTitle
+            let editTaskVC = segue.destination as! editTaskViewController
+            editTaskVC.taskId = self.selectedItemId
+            editTaskVC.projectTitle = self.projectTitle
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           
+           // Select the first item in the picker view by default
+           if let firstItem = items.first {
+               selectedItemId = firstItem.id
+               dropdown.selectRow(0, inComponent: 0, animated: false)
+           }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()

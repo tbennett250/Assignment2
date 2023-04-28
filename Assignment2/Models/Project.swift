@@ -14,6 +14,7 @@ struct Project: Codable, Identifiable{
     var start_date: String
     var end_date: String
     var user_id: Int
+    
     //var isComplete: Bool = false
     
 }

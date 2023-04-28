@@ -123,6 +123,8 @@ class AddTaskViewController: UIViewController, UIPickerViewDataSource, UIPickerV
               let name = txtName.text,
               let desc = txtDesc.text,
               let date = datePicker?.date else{
+            print("Error Convertin variables")
+            self.setErrorMsg(message: "Please fill in the fields")
             return
         }
         
@@ -145,7 +147,7 @@ class AddTaskViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let url = "http://127.0.0.1:5000/api/tasks/add"
         let user_id = UserData.shared.currentUser!.id
         
-        var task = Task(name: name, description: desc, due_date: formattedDate, status: "false", project_id: selectedProject)
+        var task = Task(name: name, description: desc, due_date: formattedDate, project_id: selectedProject, status: 0)
                 
         
         URLSession.shared.postData(task, urlString: url) { (result: Result<Task, Error>) in

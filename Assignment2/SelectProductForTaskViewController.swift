@@ -36,6 +36,18 @@ class SelectProductForTaskViewController: UIViewController, UIPickerViewDataSour
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Select the first item in the picker view by default
+        if let firstItem = items.first {
+            selectedItemId = firstItem.id
+            projectTitle = firstItem.name
+            dropdown.selectRow(0, inComponent: 0, animated: false)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -95,13 +107,6 @@ class SelectProductForTaskViewController: UIViewController, UIPickerViewDataSour
     
     
     
-    
-    @IBAction func btnDelete(_ sender: Any) {
-        
-        guard let projectID = selectedItemId else {
-            return
-        }
-        
         
         
         
@@ -121,4 +126,3 @@ class SelectProductForTaskViewController: UIViewController, UIPickerViewDataSour
     }
     */
 
-}

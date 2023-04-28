@@ -1,13 +1,13 @@
 //
-//  menuViewController.swift
+//  UserViewController.swift
 //  Assignment2
 //
-//  Created by Thomas Bennett (Student) on 19/04/2023.
+//  Created by Thomas Bennett (Student) on 28/04/2023.
 //
 
 import UIKit
 
-class menuViewController: UIViewController {
+class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +16,7 @@ class menuViewController: UIViewController {
     }
     
 
+    @IBOutlet weak var lblMessage: UILabel!
     /*
     // MARK: - Navigation
 

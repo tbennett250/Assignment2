@@ -8,10 +8,10 @@
 import Foundation
 
 struct Task: Codable {
+    var id: Int?
     var name: String
     var description: String
     var due_date: String
-    var status: String
     var project_id: Int
-    
+    var status: Int
 }
